@@ -6,10 +6,17 @@
 document.getElementById('btn-login').addEventListener('click', function(event) {
     // step - 2: prevent default behavior(prevent reloading browser)
     event.preventDefault();
-    console.log('Login button clicked.');
 
     // step - 3: get the phone number
     const phoneNumber = document.getElementById('phone-number').value;
-    console.log(phoneNumber);
+    // get the pin number
+    const pinNumber = document.getElementById('pin-number').value;
+    console.log(phoneNumber, pinNumber);
 
+    // step - 4: Validate Phone number and Pin
+    if (phoneNumber === '01787058876' && pinNumber === 'In the name of Allah,') {
+        console.log('You are logged in.');
+    } else {
+        alert('Wrong Phone number or Pin.')
+    }
 });

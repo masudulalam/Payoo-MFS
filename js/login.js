@@ -14,9 +14,13 @@ document.getElementById('btn-login').addEventListener('click', function(event) {
     console.log(phoneNumber, pinNumber);
 
     // step - 4: Validate Phone number and Pin
-    if (phoneNumber === '01787058876' && pinNumber === 'In the name of Allah,') {
+    if (phoneNumber === '01787058876' && pinNumber === '123') {
         console.log('You are logged in.');
+        window.location.href = '/home.html';
     } else {
         alert('Wrong Phone number or Pin.')
     }
+
+    // step - 5: Allow user to use the website
+
 });
